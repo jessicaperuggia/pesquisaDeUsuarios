@@ -12,16 +12,18 @@
 
 <body>
     <h1>Pesquisa de usuários</h1>
-    <div id="search-container">
-        <input id="search-input" type="search" placeholder="Busca">
-        <button id="search-button">BUSCAR</button>
+    <div id="search-container" class="flex-row flex-center">
+        <input id="search-input" type="search" placeholder="Buscar">
+        <button id="search-button" class="waves-effect waves-light btn" style="margin-left:5px;">BUSCAR</button>
     </div>
     <div id="user-container">
         <div id="user-data" class="user">
-            <h2>Nenhum usuário filtrado</h2>
+            <span id="text-user">Nenhum usuário filtrado</span>
+            <div id="tab-user"></div>
         </div>
         <div id="user-details" class="user">
-            <h2>Nada a ser exibido</h2>
+            <span id="text-detail">Nada a ser exibido</span>
+            <div id="tab-details"></div>
         </div>
     </div>
 
