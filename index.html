@@ -11,23 +11,29 @@
 </head>
 
 <body>
-    <h1>Pesquisa de usuários</h1>
-    <div id="search-container" class="flex-row flex-center">
-        <input id="search-input" type="search" placeholder="Buscar">
-        <button id="search-button" class="waves-effect waves-light btn" style="margin-left:5px;">BUSCAR</button>
+    <div class="container">
+        <h1 class="title">Pesquisa de usuários</h1>
     </div>
-    <div id="user-container">
-        <div id="user-data" class="user">
-            <span id="text-user">Nenhum usuário filtrado</span>
-            <div id="tab-user"></div>
+    <div class="flex-row">
+        <div id="search-container" class="input input-field">
+            <input id="search-input" type="search" placeholder="Buscar" class="input">
+            <button id="search-button" class="waves-effect waves-light btn">BUSCAR</button>
         </div>
-        <div id="user-details" class="user">
-            <span id="text-detail">Nada a ser exibido</span>
-            <div id="tab-details"></div>
+        <div class="flex-row flex-row-start">
+            <div id="user-container">
+                <div id="user-data" class="user">
+                    <span id="text-user">Nenhum usuário filtrado</span>
+                    <div id="tab-user"></div>
+                </div>
+                <div id="user-details" class="user">
+                    <span id="text-detail">Nada a ser exibido</span>
+                    <div id="tab-details"></div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <script src="./js/script.js"></script>
+
+        <script src="./js/script.js"></script>
 
 </body>
 
