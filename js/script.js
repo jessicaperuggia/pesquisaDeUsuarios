@@ -11,7 +11,7 @@ let searchInput = document.querySelector('#search-input');
 let searchButton = document.querySelector('#search-button');
 
 let textUser = document.querySelector('#text-user');
-let textDetail = document.querySelector('#text-details');
+let textDetail = document.querySelector('#text-detail');
 
 userData = document.querySelector('#user-data');
 userDetails = document.querySelector('#user-details');
@@ -43,14 +43,14 @@ async function fetchUsers() {
 
 }
 
+
 function render() {
     renderUrserList();
     renderStatisticList();
 }
 
 function renderUrserList() {
-    textUser.innerHTML = ` usuários: ${filterUsers.length}`
-
+    textUser.innerHTML = ` ${filterUsers.length} usuário(s) encontrado(s)`;
 
     let usersHTML = '<div>';
 
@@ -79,12 +79,14 @@ function renderUrserList() {
 }
 
 function renderStatisticList() {
+    textDetail.innerHTML = '';
     const statisticsHTML = `
     <div>
+    <h2>Estatísticas</h2>
     <ul>
     <li> Sexo masculino: ${countGenderM()}</li>
     <li> Sexo Feminio: ${countGenderF()}</li>
-    <li> Soma das idades:${sumAges()} </li>
+    <li> Soma das idades: ${sumAges()} </li>
     <li> Média das idades: ${averageAges().toFixed(2)}</li>
     </ul>
     </div>
@@ -112,18 +114,11 @@ function averageAges() {
     return sumAges() / filterUsers.length;
 }
 
-function configSearch() {
-
-}
-
 function handelButtonClick() {
     filterUsers = allUsers.filter((user) => {
 
         return user.name.toLowerCase().includes(searchInput.value.toLowerCase());
     });
-    console.log(filterUsers);
-    render();
-}
-function handelSearchKeyup() {
 
+    render();
 }
